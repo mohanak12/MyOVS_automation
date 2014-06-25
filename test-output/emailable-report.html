@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TestNG:  Unit Test</title>
+<style type="text/css">
+table caption,table.info_table,table.param,table.passed,table.failed {margin-bottom:10px;border:1px solid #000099;border-collapse:collapse;empty-cells:show;}
+table.info_table td,table.info_table th,table.param td,table.param th,table.passed td,table.passed th,table.failed td,table.failed th {
+border:1px solid #000099;padding:.25em .5em .25em .5em
+}
+table.param th {vertical-align:bottom}
+td.numi,th.numi,td.numi_attn {
+text-align:right
+}
+tr.total td {font-weight:bold}
+table caption {
+text-align:center;font-weight:bold;
+}
+table.passed tr.stripe td,table tr.passedodd td {background-color: #00AA00;}
+table.passed td,table tr.passedeven td {background-color: #33FF33;}
+table.passed tr.stripe td,table tr.skippedodd td {background-color: #cccccc;}
+table.passed td,table tr.skippedodd td {background-color: #dddddd;}
+table.failed tr.stripe td,table tr.failedodd td,table.param td.numi_attn {background-color: #FF3333;}
+table.failed td,table tr.failedeven td,table.param tr.stripe td.numi_attn {background-color: #DD0000;}
+tr.stripe td,tr.stripe th {background-color: #E6EBF9;}
+p.totop {font-size:85%;text-align:center;border-bottom:2px black solid}
+div.shootout {padding:2em;border:3px #4854A8 solid}
+</style>
+</head>
+<body>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
+<tr><th colspan="7">My Suite</th></tr>
+<tr><th colspan="7">PersonalAdministartion</th></tr>
+<tr><td style="text-align:left;padding-right:2em">Login</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">4</td><td class="numi">0</td><td class="numi">0.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em">Personal Details</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">0</td><td class="numi">0.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Family</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">55.4 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="total"><td>Total</td>
+<td class="numi">0</td><td class="numi">0</td><td class="numi_attn">5</td><td class="numi_attn">1</td><td class="numi">55.8 seconds</td><td colspan="2">&nbsp;</td></tr>
+</table>
+<a id="summary"></a>
+<table cellspacing=0 cellpadding=0 class="passed">
+<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr><th colspan="4">My Suite</th></tr>
+<tr><th colspan="4">PersonalAdministartion</th></tr>
+<tr><th colspan="4">Login &#8212; skipped (configuration methods)</th></tr>
+<tr class="skippedodd"><td rowspan="3">com.MyOVS.PersonalAdministration.Login<td><a href="#m1"><b>checkTestSkip</b>  </a></td><td class="numi">1</td><td>1360845793985</td><td class="numi">0</td></tr><tr class="skippedodd"><td><a href="#m2"><b>reporter</b>  </a></td><td class="numi">4</td><td>1360845794112</td><td class="numi">10</td></tr><tr class="skippedodd"><td><a href="#m3"><b>reportTestResult</b>  </a></td><td class="numi">1</td><td>1360845794124</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Login &#8212; skipped</th></tr>
+<tr class="skippedodd"><td rowspan="4">com.MyOVS.PersonalAdministration.Login<td><a href="#m4"><b>loginTest</b>  </a></td><td class="numi">4</td><td>1360845794074</td><td class="numi">47</td></tr><tr class="skippedodd"><td><a href="#m5"><b>loginTest</b>  </a></td><td class="numi">4</td><td>1360845794074</td><td class="numi">47</td></tr><tr class="skippedodd"><td><a href="#m6"><b>loginTest</b>  </a></td><td class="numi">4</td><td>1360845794074</td><td class="numi">47</td></tr><tr class="skippedodd"><td><a href="#m7"><b>loginTest</b>  </a></td><td class="numi">4</td><td>1360845794074</td><td class="numi">47</td></tr>
+<tr><th colspan="4">Personal Details &#8212; skipped (configuration methods)</th></tr>
+<tr class="skippedodd"><td rowspan="3">com.MyOVS.PersonalAdministration.Personal_Details<td><a href="#m8"><b>checkTestSkip</b>  </a></td><td class="numi">1</td><td>1360845794278</td><td class="numi">0</td></tr><tr class="skippedodd"><td><a href="#m9"><b>reportTestResult</b>  </a></td><td class="numi">1</td><td>1360845794290</td><td class="numi">0</td></tr><tr class="skippedodd"><td><a href="#m10"><b>reporter</b>  </a></td><td class="numi">1</td><td>1360845794289</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Personal Details &#8212; skipped</th></tr>
+<tr class="skippedodd"><td rowspan="1">com.MyOVS.PersonalAdministration.Personal_Details<td><a href="#m11"><b>modifyPersonalDetails</b>  </a></td><td class="numi">1</td><td>1360845794282</td><td class="numi">5</td></tr>
+<tr><th colspan="4">Family &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">com.MyOVS.PersonalAdministration.Family_Member<td><a href="#m12"><b>familyMember</b>  ("Adding a Family member")</a></td><td class="numi">1</td><td>1360845794344</td><td class="numi">54845</td></tr>
+</table>
+<h1>Login</h1>
+<a id="m1"></a><h2>com.MyOVS.PersonalAdministration.Login:reporter</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m2"></a><h2>com.MyOVS.PersonalAdministration.Login:checkTestSkip</h2>
+<div style="padding-left:3em">
+<p>Skipping test case as the Runmode is set to No</p>
+com.MyOVS.PersonalAdministration.Login.checkTestSkip(Login.java:31)
+<br/>24 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m3"></a><h2>com.MyOVS.PersonalAdministration.Login:reportTestResult</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m4"></a><h2>com.MyOVS.PersonalAdministration.Login:reporter</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m5"></a><h2>com.MyOVS.PersonalAdministration.Login:reporter</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m6"></a><h2>com.MyOVS.PersonalAdministration.Login:reporter</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m7"></a><h2>com.MyOVS.PersonalAdministration.Login:loginTest</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th><th style="padding-left:1em;padding-right:1em">Parameter #2</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">http://steks\smithe:Sales@ovs@192.168.0.90</td>
+<td style="padding-left:.5em;padding-right:2em">Nagative</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m8"></a><h2>com.MyOVS.PersonalAdministration.Login:loginTest</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th><th style="padding-left:1em;padding-right:1em">Parameter #2</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">http://stek\smithe:Sales@ovs@192.168.0.90</td>
+<td style="padding-left:.5em;padding-right:2em">Positive</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m9"></a><h2>com.MyOVS.PersonalAdministration.Login:loginTest</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th><th style="padding-left:1em;padding-right:1em">Parameter #2</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">http://steks\smithe:Sales@ovs@192.168.0.90</td>
+<td style="padding-left:.5em;padding-right:2em">Negative</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m10"></a><h2>com.MyOVS.PersonalAdministration.Login:loginTest</h2>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th style="padding-left:1em;padding-right:1em">Parameter #1</th><th style="padding-left:1em;padding-right:1em">Parameter #2</th></tr>
+<tr><td style="padding-left:.5em;padding-right:2em">http://steks\smithe:Sales@ovss@192.168.0.90</td>
+<td style="padding-left:.5em;padding-right:2em">Negative</td>
+</tr>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>Personal Details</h1>
+<a id="m11"></a><h2>com.MyOVS.PersonalAdministration.Personal_Details:reportTestResult</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m12"></a><h2>com.MyOVS.PersonalAdministration.Personal_Details:checkTestSkip</h2>
+<div style="padding-left:3em">
+<p>Skipping test case as the Runmode is set to No</p>
+com.MyOVS.PersonalAdministration.Personal_Details.checkTestSkip(Personal_Details.java:35)
+<br/>24 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m13"></a><h2>com.MyOVS.PersonalAdministration.Personal_Details:reporter</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m14"></a><h2>com.MyOVS.PersonalAdministration.Personal_Details:modifyPersonalDetails</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>Family</h1>
+<a id="m15"></a><h2>com.MyOVS.PersonalAdministration.Family_Member:familyMember</h2>
+<div style="padding-left:3em">
+<p>Failed to connect to binary FirefoxBinary(C:\Program Files (x86)\Mozilla Firefox\firefox.exe) on port 7055; process output follows: 
+*** LOG addons.manager: Application has been upgraded
+*** LOG addons.xpi: startup
+*** LOG addons.xpi: Skipping unavailable install location app-system-local
+*** LOG addons.xpi: Skipping unavailable install location app-system-share
+*** LOG addons.xpi: Ignoring file entry whose name is not a valid add-on ID: C:\Users\SUREND~1.CHE\AppData\Local\Temp\anonymous8561946150296603809webdriver-profile\extensions\webdriver-staging
+*** LOG addons.xpi: checkForChanges
+*** LOG addons.xpi-utils: Opening database
+*** LOG addons.xpi-utils: Creating database schema
+*** LOG addons.xpi: New add-on fxdriver@googlecode.com installed in app-profile
+*** LOG addons.xpi: New add-on {82AF8DCA-6DE9-405D-BD5E-43525BDAD38A} installed in app-global
+*** LOG addons.xpi: New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} installed in app-global
+*** LOG addons.xpi: New add-on {BBDA0591-3099-440a-AA10-41764D9DB4DB} installed in winreg-app-global
+*** LOG addons.xpi: New add-on wcapturex@deskperience.com installed in winreg-app-global
+*** LOG addons.xpi: New add-on {4ED1F68A-5463-4931-9384-8FFF5ED91D92} installed in winreg-app-global
+*** LOG addons.xpi: Updating database with changes to installed add-ons
+*** LOG addons.xpi-utils: Updating add-on states
+*** LOG addons.xpi-utils: Writing add-ons list
+*** LOG addons.manager: shutdown
+*** LOG addons.xpi: shutdown
+*** LOG addons.xpi-utils: shutdown
+*** LOG addons.xpi-utils: Database closed
+*** LOG addons.xpi: startup
+*** LOG addons.xpi: Skipping unavailable install location app-system-local
+*** LOG addons.xpi: Skipping unavailable install location app-system-share
+*** LOG addons.xpi: Ignoring file entry whose name is not a valid add-on ID: C:\Users\SUREND~1.CHE\AppData\Local\Temp\anonymous8561946150296603809webdriver-profile\extensions\webdriver-staging
+*** LOG addons.xpi: checkForChanges
+*** LOG addons.xpi: No changes found
+
+Build info: version: &apos;2.25.0&apos;, revision: &apos;17482&apos;, time: &apos;2012-07-18 21:09:54&apos;
+System info: os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_02&apos;
+Driver info: driver.version: FirefoxDriver</p>
+org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:121)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:245)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:109)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:185)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:178)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:174)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:92)
+<br/>at com.MyOVS.PersonalAdministration.TestSuiteBase.openBrowser(TestSuiteBase.java:69)
+<br/>at com.MyOVS.PersonalAdministration.Family_Member.familyMember(Family_Member.java:50)
+<br/>26 lines not shown
+<p>Caused by Unable to connect to host 127.0.0.1 on port 7055 after 45000 ms. Firefox console output:
+*** LOG addons.manager: Application has been upgraded
+*** LOG addons.xpi: startup
+*** LOG addons.xpi: Skipping unavailable install location app-system-local
+*** LOG addons.xpi: Skipping unavailable install location app-system-share
+*** LOG addons.xpi: Ignoring file entry whose name is not a valid add-on ID: C:\Users\SUREND~1.CHE\AppData\Local\Temp\anonymous8561946150296603809webdriver-profile\extensions\webdriver-staging
+*** LOG addons.xpi: checkForChanges
+*** LOG addons.xpi-utils: Opening database
+*** LOG addons.xpi-utils: Creating database schema
+*** LOG addons.xpi: New add-on fxdriver@googlecode.com installed in app-profile
+*** LOG addons.xpi: New add-on {82AF8DCA-6DE9-405D-BD5E-43525BDAD38A} installed in app-global
+*** LOG addons.xpi: New add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} installed in app-global
+*** LOG addons.xpi: New add-on {BBDA0591-3099-440a-AA10-41764D9DB4DB} installed in winreg-app-global
+*** LOG addons.xpi: New add-on wcapturex@deskperience.com installed in winreg-app-global
+*** LOG addons.xpi: New add-on {4ED1F68A-5463-4931-9384-8FFF5ED91D92} installed in winreg-app-global
+*** LOG addons.xpi: Updating database with changes to installed add-ons
+*** LOG addons.xpi-utils: Updating add-on states
+*** LOG addons.xpi-utils: Writing add-ons list
+*** LOG addons.manager: shutdown
+*** LOG addons.xpi: shutdown
+*** LOG addons.xpi-utils: shutdown
+*** LOG addons.xpi-utils: Database closed
+*** LOG addons.xpi: startup
+*** LOG addons.xpi: Skipping unavailable install location app-system-local
+*** LOG addons.xpi: Skipping unavailable install location app-system-share
+*** LOG addons.xpi: Ignoring file entry whose name is not a valid add-on ID: C:\Users\SUREND~1.CHE\AppData\Local\Temp\anonymous8561946150296603809webdriver-profile\extensions\webdriver-staging
+*** LOG addons.xpi: checkForChanges
+*** LOG addons.xpi: No changes found
+</p>
+org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:109)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:245)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:109)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:185)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:178)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:174)
+<br/>at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:92)
+<br/>at com.MyOVS.PersonalAdministration.TestSuiteBase.openBrowser(TestSuiteBase.java:69)
+<br/>at com.MyOVS.PersonalAdministration.Family_Member.familyMember(Family_Member.java:50)
+<br/>26 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body></html>

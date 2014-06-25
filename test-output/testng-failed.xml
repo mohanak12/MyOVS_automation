@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [PersonalAdministartion]">
+  <listeners>
+    <listener class-name="com.MyOVS.listener.CustomTestListener"/>
+  </listeners>
+  <test name="Login(failed)">
+    <classes>
+      <class name="com.MyOVS.PersonalAdministration.Personal_Details">
+        <methods>
+          <include name="checkTestSkip"/>
+        </methods>
+      </class> <!-- com.MyOVS.PersonalAdministration.Personal_Details -->
+      <class name="com.MyOVS.PersonalAdministration.Login">
+        <methods>
+          <include name="loginTest"/>
+          <include name="checkTestSkip"/>
+        </methods>
+      </class> <!-- com.MyOVS.PersonalAdministration.Login -->
+      <class name="com.MyOVS.PersonalAdministration.Family_Member">
+        <methods>
+          <include name="checkSuiteSkip"/>
+          <include name="reporter"/>
+          <include name="checkTestSkip"/>
+          <include name="reportTestResult"/>
+        </methods>
+      </class> <!-- com.MyOVS.PersonalAdministration.Family_Member -->
+    </classes>
+  </test> <!-- Login(failed) -->
+  <test name="Personal Details(failed)">
+    <classes>
+      <class name="com.MyOVS.PersonalAdministration.Personal_Details">
+        <methods>
+          <include name="checkTestSkip"/>
+          <include name="modifyPersonalDetails"/>
+        </methods>
+      </class> <!-- com.MyOVS.PersonalAdministration.Personal_Details -->
+      <class name="com.MyOVS.PersonalAdministration.Login">
+        <methods>
+          <include name="checkTestSkip"/>
+        </methods>
+      </class> <!-- com.MyOVS.PersonalAdministration.Login -->
+      <class name="com.MyOVS.PersonalAdministration.Family_Member">
+        <methods>
+          <include name="checkSuiteSkip"/>
+          <include name="reporter"/>
+          <include name="checkTestSkip"/>
+          <include name="reportTestResult"/>
+        </methods>
+      </class> <!-- com.MyOVS.PersonalAdministration.Family_Member -->
+    </classes>
+  </test> <!-- Personal Details(failed) -->
+  <test name="Family(failed)">
+    <classes>
+      <class name="com.MyOVS.PersonalAdministration.Personal_Details">
+        <methods>
+          <include name="checkTestSkip"/>
+        </methods>
+      </class> <!-- com.MyOVS.PersonalAdministration.Personal_Details -->
+      <class name="com.MyOVS.PersonalAdministration.Login">
+        <methods>
+          <include name="checkTestSkip"/>
+        </methods>
+      </class> <!-- com.MyOVS.PersonalAdministration.Login -->
+      <class name="com.MyOVS.PersonalAdministration.Family_Member">
+        <methods>
+          <include name="checkSuiteSkip"/>
+          <include name="familyMember"/>
+          <include name="reporter"/>
+          <include name="checkTestSkip"/>
+          <include name="reportTestResult"/>
+        </methods>
+      </class> <!-- com.MyOVS.PersonalAdministration.Family_Member -->
+    </classes>
+  </test> <!-- Family(failed) -->
+</suite> <!-- Failed suite [PersonalAdministartion] -->

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="PersonalAdministartion" >
+
+
+<test name="Login" preserve-order="true" > 
+<classes>
+<class name="com.MyOVS.PersonalAdministration.Login"/>
+</classes>
+</test> 
+
+<test name="Personal Details"> 
+<classes>
+<class name="com.MyOVS.PersonalAdministration.Personal_Details"/>
+</classes>
+</test> 
+
+<test name="Family"> 
+<classes>
+<class name="com.MyOVS.PersonalAdministration.Family_Member"/>
+</classes>
+</test> 
+
+</suite> 

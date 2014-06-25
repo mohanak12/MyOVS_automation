@@ -1,0 +1,20 @@
+
+<suite name="My Suite"> 
+    <listeners>
+        <listener class-name="com.MyOVS.listener.CustomTestListener"/>
+    </listeners>
+ 
+
+<suite-files>
+
+<suite-file path="./PersonalAdministration.xml" />
+<!--  
+<suite-file path="./Test1.xml" />
+<suite-file path="./Test2.xml" />
+-->
+
+</suite-files>
+
+
+
+</suite> 

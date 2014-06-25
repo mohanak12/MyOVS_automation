@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="SCS-DT-086" name="com.qtpselenium.suiteB.TestCase_B2" tests="1" failures="0" timestamp="27 Nov 2012 08:46:19 GMT" time="0.002" errors="0">
+  <testcase name="testCase_B2" time="0.001" classname="com.qtpselenium.suiteB.TestCase_B2"/>
+</testsuite>

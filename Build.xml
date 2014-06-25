@@ -1,0 +1,173 @@
+ <project name="MyOVS" basedir="." >
+ 	
+ 	<!--  (Env var: Create ANT_HOME varaible=path of ant and path variable=path of ant bin to be given)
+ 	
+ 	
+ 	1. CMD -> D: 
+ 	2. CD D:Selenium/Tests (Location of the project, copy the path by r.c -> properties)  
+ 	3. ant
+ 	4. ant Clean, ant compile, ant run are the commanda used to run the project
+ 	5. Change the file name in the  Target "Run" (testng.xml contains the name of all classes). <xmlfileset dir="${basedir}" includes="testng.xml"/>  
+ 	ant is the package name and TestApplication.class is the name of the project
+ 	
+ 	We can also write all the commands in the txt file and save as bat file 
+ 	
+ 	Test ng:
+	1. testng-results.xsl should be placed in package xslt under the src
+	Download all files from http://sejsoft.com/downloads/jars.rar
+	
+	SendAntMail :
+	Download "Activation.jar" and "Mail.jar" and place it in Ant library.
+	Environmental variables >> ANT_HOME's Path is the Ant library location
+
+
+	-->
+
+<property environment="env"/>
+
+    <property name="ws.home"   value="${basedir}"/>
+    <property name="ws.jars"   value="D:\MYOVS\MyOVS_WorkSpace\MyOVS_Automation\jarsCore"/>
+    <property name="test.dest" value="${ws.home}/build"/>
+    <property name="test.src"  value="${ws.home}/src"/>
+    <property name="ng.result" value="test-output"/>
+
+<path id="testcase.path">
+	<pathelement location="${test.dest}" />
+	
+	<fileset dir="${ws.jars}">
+		<include name="*.jar"/>
+	</fileset>
+</path>
+		
+ 	
+    <!-- clean -->
+ <target name="clean">
+ 	<delete dir="${test.dest}"/>
+ </target>
+	
+<target name="setClassPath" unless="test.classpath">
+	<path id="classpath_jars">
+		<fileset dir="${ws.jars}" includes="*.jar"/>
+	</path>
+		<pathconvert pathsep=":" property="test.classpath" refid="classpath_jars"/>
+</target>
+	
+
+
+<target name="init" depends="setClassPath">
+	<tstamp>
+		<format property="start.time" pattern="MM/dd/yyyy hh:mm aa" />
+	</tstamp>
+		<condition property="ANT" value="${env.ANT_HOME}/bin/ant.bat" else="${env.ANT_HOME}/bin/ant">
+			<os family="windows" />
+		</condition>
+</target>
+		
+
+   <!-- compile -->
+<target name="compile" depends="init, clean">
+	<delete includeemptydirs="true" quiet="true">
+		<fileset dir="${test.dest}" includes="**/*"/>
+	</delete>
+	<echo message="Making directory..."/>
+	<mkdir dir="${test.dest}"/>
+	<echo message="classpath---------: ${test.classpath}"/>
+		<echo message="Compiling..."/>
+	<javac debug="true" destdir="${test.dest}" srcdir="${test.src}" target="1.7" classpath="${test.classpath}">
+	</javac>
+</target>
+    
+
+
+    
+	<!-- run   depends="jar" -->
+ 	
+<!--  
+ <target name="run">
+ 	<delete includeemptydirs="true" quiet="true">
+ 		<fileset dir="${test.reportsDir}" includes="**/*"/>
+ 	</delete>
+ 	<java jar="${ws.jars}" fork="true" spawn="true"/>
+ 	<junit fork="yes" haltonfailure="no" printsummary="yes">
+ 		<classpath refid="testcase.path" />
+ 		<batchtest todir="${test.reportsDir}" fork="true">  
+ 			<fileset dir="${test.dest}">
+ 				<include name="ant/TestApplication.class"/>
+ 			</fileset>    		
+ 		</batchtest>
+ 		<formatter type="xml" />
+ 		<classpath refid="testcase.path" />
+ 	</junit>
+ 	
+ 	<junitreport todir="${test.reportsDir}">
+ 		<fileset dir="${test.reportsDir}">
+ 			<include name="TEST-*.xml" />
+ 		</fileset>
+ 		<report todir="${test.reportsDir}" />
+ 	</junitreport>
+ </target> 
+ -->
+ 
+ 	
+<target name="run" depends="compile">
+	<taskdef resource="testngtasks" classpath="${ws.jars}/testng-6.0.1-nobsh-noguice.jar" />
+	<testng classpath="${test.classpath}:${test.dest}" suitename="Suitetestng"> 
+		<xmlfileset dir="${ws.home}" includes="MyOVS_Main.xml"/>
+	</testng>
+</target>
+ 	
+  
+ 	
+ <target name="usage">
+ 	<echo>
+ 		ant run will execute the test
+ 	</echo>
+ </target>
+
+    <path id="test.c">
+    	<fileset dir="${ws.jars}" includes="*.jar"/>
+    </path>
+	
+     
+    
+    
+    <target name="makexsltreports">
+    	<delete dir="${ws.home}/XSLT_Reports"/>
+    	<mkdir dir="${ws.home}/XSLT_Reports"/>
+    	<xslt in="${ng.result}/testng-results.xml" style="src/xslt/testng-results.xsl" out="${ws.home}/XSLT_Reports/index.html" classpathref="test.c" processor="SaxonLiaison">
+    		<Param name="testNgXslt.outputDir" expression="${ws.home}/XSLT_Reports"/>
+    			<Param name="testNgXslt.showRuntimeTotals" expression="true"/>
+    	</xslt>
+    </target>
+    
+    <target name="zip">
+        <delete dir="${ws.home}/Zipped-XSLT-Report"/>
+        <mkdir dir="${ws.home}/Zipped-XSLT-Report"/>
+        <zip destfile="${basedir}/Zipped-XSLT-Report/Report.zip" basedir="${basedir}/XSLT_Reports" />
+    </target>
+    
+    
+   <!-- Sending mail though SendMail class -->
+   <target name="sendmail" >
+	<java classname="com.MyOVS.util.SendMail" classpath="${test.dest}" classpathref="test.c" />
+	</target>
+	
+    
+    <target name="sendAntMail">
+        <!--  <zip destfile="${basedir}/XSLT_Reports/output/Report.zip" basedir="${basedir}/XSLT_Reports/output"/> -->
+        <mail enableStartTLS="true"  mailhost="smtp.gmail.com" mailport="465" subject="Notification of TESTNG build" ssl="true" charset="ISO-8859-1" user="selva.proakrma.test@gmail.com" password="prokarma">
+            <from address="selva.proakrma.test@gmail.com"/>
+            <to address="psurendra@prokarma.com"/>
+            <!--  <cc address="hemalathap@smartek21.com"/> -->
+            <message>The build has finished. A details report of this build is attached</message>
+            <attachments>
+                <fileset dir="${ws.home}/Zipped-XSLT-Report">                 	
+                    <include name="Report.zip"/>
+                </fileset>
+            </attachments>
+        </mail>
+    </target>
+    
+    
+    
+ </project>

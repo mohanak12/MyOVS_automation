@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="jarsCore/activation.jar"/>
+	<classpathentry kind="lib" path="jarsCore/apache-mime4j-0.6.jar"/>
+	<classpathentry kind="lib" path="jarsCore/bsh-1.3.0.jar"/>
+	<classpathentry kind="lib" path="jarsCore/cglib-nodep-2.1_3.jar"/>
+	<classpathentry kind="lib" path="jarsCore/commons-codec-1.6.jar"/>
+	<classpathentry kind="lib" path="jarsCore/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="jarsCore/commons-exec-1.1.jar"/>
+	<classpathentry kind="lib" path="jarsCore/commons-io-2.0.1.jar"/>
+	<classpathentry kind="lib" path="jarsCore/commons-jxpath-1.3.jar"/>
+	<classpathentry kind="lib" path="jarsCore/commons-lang-2.6.jar"/>
+	<classpathentry kind="lib" path="jarsCore/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="jarsCore/commons-logging-1.1.jar"/>
+	<classpathentry kind="lib" path="jarsCore/cssparser-0.9.5.jar"/>
+	<classpathentry kind="lib" path="jarsCore/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="jarsCore/geronimo-stax-api_1.0_spec-1.0.jar"/>
+	<classpathentry kind="lib" path="jarsCore/guava-12.0.jar"/>
+	<classpathentry kind="lib" path="jarsCore/hamcrest-core-1.1.jar"/>
+	<classpathentry kind="lib" path="jarsCore/hamcrest-library-1.1.jar"/>
+	<classpathentry kind="lib" path="jarsCore/htmlunit-2.9.jar"/>
+	<classpathentry kind="lib" path="jarsCore/htmlunit-core-js-2.9.jar"/>
+	<classpathentry kind="lib" path="jarsCore/httpclient-4.1.3.jar"/>
+	<classpathentry kind="lib" path="jarsCore/httpcore-4.1.3.jar"/>
+	<classpathentry kind="lib" path="jarsCore/httpmime-4.1.3.jar"/>
+	<classpathentry kind="lib" path="jarsCore/ini4j-0.5.2.jar"/>
+	<classpathentry kind="lib" path="jarsCore/jcommander-1.13.jar"/>
+	<classpathentry kind="lib" path="jarsCore/jna-3.4.0.jar"/>
+	<classpathentry kind="lib" path="jarsCore/jna-platform-3.4.0.jar"/>
+	<classpathentry kind="lib" path="jarsCore/json-20080701.jar"/>
+	<classpathentry kind="lib" path="jarsCore/junit-3.8.1.jar"/>
+	<classpathentry kind="lib" path="jarsCore/junit-dep-4.10.jar"/>
+	<classpathentry kind="lib" path="jarsCore/log4j-1.2.13.jar"/>
+	<classpathentry kind="lib" path="jarsCore/log4j-1.2.14.jar"/>
+	<classpathentry kind="lib" path="jarsCore/mail.jar"/>
+	<classpathentry kind="lib" path="jarsCore/nekohtml-1.9.15.jar"/>
+	<classpathentry kind="lib" path="jarsCore/netty-3.2.7.Final.jar"/>
+	<classpathentry kind="lib" path="jarsCore/operadriver-0.14.jar"/>
+	<classpathentry kind="lib" path="jarsCore/poi-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="jarsCore/poi-examples-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="jarsCore/poi-ooxml-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="jarsCore/poi-ooxml-schemas-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="jarsCore/poi-scratchpad-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="jarsCore/protobuf-java-2.4.1.jar"/>
+	<classpathentry kind="lib" path="jarsCore/sac-1.3.jar"/>
+	<classpathentry kind="lib" path="jarsCore/saxon-8.7.jar"/>
+	<classpathentry kind="lib" path="jarsCore/SaxonLiaison.jar"/>
+	<classpathentry kind="lib" path="jarsCore/selenium-java-2.25.0-srcs.jar"/>
+	<classpathentry kind="lib" path="jarsCore/selenium-java-2.25.0.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://selenium.googlecode.com/svn/trunk/docs/api/java/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="jarsCore/serializer-2.7.1.jar"/>
+	<classpathentry kind="lib" path="jarsCore/testng-6.0.1-nobsh-noguice.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://testng.org/javadoc"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="jarsCore/testng-xslt-maven-plugin-test-0.0.jar"/>
+	<classpathentry kind="lib" path="jarsCore/webbit-0.4.8-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="jarsCore/xalan-2.7.1.jar"/>
+	<classpathentry kind="lib" path="jarsCore/xercesImpl-2.9.1.jar"/>
+	<classpathentry kind="lib" path="jarsCore/xml-apis-1.3.04.jar"/>
+	<classpathentry kind="lib" path="jarsCore/xmlbeans-2.3.0.jar"/>
+	<classpathentry kind="lib" path="D:/softwares/selenium-2.35.0/selenium-server-standalone-2.37.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

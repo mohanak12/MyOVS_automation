@@ -1,0 +1,24 @@
+
+The files under com.qtpselenium.listner package used for the assertions
+
+In a try catch block test fails but the rest of the code in the catch block is executed.
+
+
+1. Add the below code in the testng.xml  ( below 1st line = <suite name="My Suite">  )
+
+    <listeners>
+        <listener class-name="com.qtpselenium.listener.CustomTestListener"/>
+    </listeners>
+    
+2. CustomTestListener contains all the method implementation so that particular class is added to it
+
+3. Observe the below code, 
+
+try{
+		Assert.assertEquals(actualResult, expectedResult);
+		}catch(Throwable t){
+			
+			ErrorUtil.addVerificationFailure(t);  // Makes the test fail but implements the next line fail=true even after exception
+			fail=true;				
+			
+		}	
